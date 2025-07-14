@@ -17,14 +17,40 @@ I’m only going to assume some level of familiarity with the most basic git com
 5. checkout: Switches between different branches or restores working tree files.
 
 Language wise, i will be implementing this in C++ , 
-I ain't trynna using anything too fancy
-and cpp code looks like a pseudo code anyways, so it will be easy to follow I guess ,
+
+I'm not trying to do anything too fancy
+in fact, I chose C++ because it often reads like pseudocode,
+so it should be fairly easy to follow , I GUESS.
 IMO the most complicated part will be the command line args parsing logic 
 
-We will use this command to run out file and make it executable
+Let's first understand the structure of this project:
+
+wyag/
+├── src/
+│   ├── main.cpp
+│   ├── object.cpp
+│   ├── repository.cpp
+│   ├── utils.cpp
+│   ├── object.h
+│   ├── repository.h
+│   ├── utils.h
+├── wyag
+
+
+We will use this command to run out file and make it executable:
 
 g++ -std=c++17 -o wyag main.cpp repository.cpp object.cpp ...
 
-We can add fancy Shebang for fancy ux
+after this command use this to run the executable file 
+I'm doing my shit in linux. 
+So, I'll be using
 
-#!/usr/bin/env wyag
+./wyag
+
+in the terminal
+ 
+
+
+
+
+
