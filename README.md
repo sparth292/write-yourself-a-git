@@ -1,0 +1,1 @@
+Writing myself a git
