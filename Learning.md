@@ -1,13 +1,35 @@
 In C++, nullptr is a keyword introduced in C++11 that represents a null pointer, which is a pointer that does not point to any valid memory address.
 It is used to indicate that a pointer is not currently pointing to any object or function. 
  
+<filesystem> – file and path operations (like os.path)
 
-Filesystem Library
+<fstream> – reading/writing files
 
-ctime Library
+<sstream> – string streams and formatting
 
-chrono Library
+<iomanip> – time formatting, padding (e.g., std::setw)
 
-sstream Library
+<chrono> – to get current time (system_clock)
 
-iomanip Library
+<ctime> – convert time to local/UTC (localtime)
+
+<cmath> – math functions like ceil
+
+<regex> – regular expressions (like re in Python)
+
+<cstdlib> – for environment variables, exit(), etc.
+
+<pwd.h> – to get Unix user info (like pwd in Python)
+
+<grp.h> – to get group info (like grp in Python)
+
+<unistd.h> – access POSIX system calls
+
+<fnmatch.h> – filename pattern matching (*.txt, like fnmatch)
+
+<zlib.h> – for compression (used in Git objects)
+
+<openssl/sha.h> – for SHA-1 hashing (hashlib.sha1)
+
+<getopt.h> – for command-line argument parsing (alternative to argparse)
+
