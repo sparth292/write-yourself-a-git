@@ -39,7 +39,7 @@ wyag/
 
 We will use this command to run out file and make it executable:
 
-g++ -std=c++17 -o wyag main.cpp repository.cpp object.cpp ...
+g++ -std=c++17 -o wyag src/main.cpp src/repository.cpp src/utils.cpp
 
 after this command use this to run the executable file 
 I'm doing my shit in linux. 
