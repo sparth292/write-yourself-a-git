@@ -19,4 +19,11 @@ std::string write_blob(std::string& filePath , std::string& objectDir){
     std::string content = buffer.str();
     file.close();
 
+    std::string header = "blob" + std::to_string(content.size()) + '\0';
+    std::string full_data = header + content;
+
+    unsigned char hash[SHA_DIGEST_LENGTH];
+
+    
+
 }
