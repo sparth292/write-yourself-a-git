@@ -12,5 +12,21 @@ int main(int argc, char* args[]){
     
     std::cout << "Current timestamp: " << timestamp << std::endl;
 
+    if(argc > 2){
+    
+        std::cerr << "Usage of wyag <commands>";
+    
+    }
+
+    std::string cmd = args[1];
+
+    if(cmd == "init"){
+        Repository repo(".");
+        repo.init();
+    }
+    else{
+        std::cerr << "Unknown Command : " << cmd << std::endl;
+    }
+
     return 0;
 }

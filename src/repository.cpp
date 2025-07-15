@@ -4,7 +4,7 @@
 Repository::Repository(const std::string& path){
 
     workTree = path;
-    gitDirectory = std::filesystem::path(path) / ".git";
+    gitDirectory = std::filesystem::path(path) / ".wyag";
 
 }
 

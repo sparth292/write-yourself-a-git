@@ -12,6 +12,7 @@ class Repository{
       
      std::string git_path(const std::string& subpath) const;
 
+     void init();
 };
 
 #endif  
