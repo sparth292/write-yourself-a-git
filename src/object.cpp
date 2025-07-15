@@ -8,7 +8,7 @@
 #include <openssl/sha.h>
 
 
-std::string write_blob(std::string& filePath , std::string& objectDir){
+std::string write_blob(const std::string& filePath , const std::string& objectDir){
 
     std::ifstream file(filePath , std::ios::binary);
     if(!file){

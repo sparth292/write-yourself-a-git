@@ -2,7 +2,7 @@
 #ifndef OBJECT_H
 #define OBJECT_H
 
-std::string write_blob(const std::string& filePath , std::string& objectDir);
+std::string write_blob(const std::string& filePath ,const std::string& objectDir);
     //lihaycha aahe ajun jk jhalay code 
 
 

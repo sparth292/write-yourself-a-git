@@ -1,31 +1,34 @@
-#include <iostream>
+#include "object.h"
 #include "repository.h"
 #include "utils.h"
+#include <iostream>
 
-int main(int argc, char* args[]){
-    
-    Repository repo("/home/parth/Desktop/write-yourself-a-git/");
-
-    std::cout << "Config Path " << repo.git_path("config") << std::endl;    
-    
-    std::string timestamp = get_timestamp_with_timezone();
-    
-    std::cout << "Current timestamp: " << timestamp << std::endl;
-
-    if(argc > 2){
-    
-        std::cerr << "Usage of wyag <commands>";
-    
+int main(int argc, char* args[]) {
+    if (argc < 2) {
+        std::cerr << "Usage: wyag <command> [args...]" << std::endl;
+        return 1;
     }
 
     std::string cmd = args[1];
 
-    if(cmd == "init"){
+    if (cmd == "init") {
         Repository repo(".");
         repo.init();
     }
-    else{
+    else if (cmd == "hash-object") {
+        if (argc < 3) {
+            std::cerr << "Usage: wyag hash-object <file>" << std::endl;
+            return 1;
+        }
+
+        std::string file_path = args[2];
+        Repository repo(".");
+        std::string sha1 = write_blob(file_path, repo.git_path("objects"));
+        std::cout << sha1 << std::endl;
+    }
+    else {
         std::cerr << "Unknown Command : " << cmd << std::endl;
+        return 1;
     }
 
     return 0;
