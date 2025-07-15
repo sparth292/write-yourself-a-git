@@ -1,5 +1,6 @@
 #include "object.h"
 #include <zlib.h>
+#include <vector>
 #include <fstream>
 #include <sstream>
 #include <iostream>
@@ -34,6 +35,24 @@ std::string write_blob(std::string& filePath , std::string& objectDir){
 
     std::string sha1 = oss.str();
 
-    
+    uLongf compressed_size = compressBound(full_data.size());
+std::vector<unsigned char> compressed(compressed_size);
 
+int z_result = compress(compressed.data(), &compressed_size,
+                        reinterpret_cast<const Bytef*>(full_data.data()),
+                        full_data.size());
+
+if (z_result != Z_OK) {
+    throw std::runtime_error("Compression failed");
+}
+
+    std::string dir = objectDir + "/" + sha1.substr(0, 2);
+    std::string fileName = sha1.substr(2);
+    std::filesystem::create_directories(dir);
+
+ std::ofstream out(dir + "/" + fileName, std::ios::binary);
+out.write(reinterpret_cast<const char*>(compressed.data()), compressed_size);
+out.close();
+
+    return sha1;
 }
