@@ -33,3 +33,12 @@ It is used to indicate that a pointer is not currently pointing to any object or
 
 <getopt.h> – for command-line argument parsing (alternative to argparse)
 
+GIT INIT
+
+In Git, init does the following:
+Creates a .git/ directory if it doesn’t exist.
+Initializes subdirectories like:
+objects/
+refs/
+Writes an initial HEAD file pointing to refs/heads/master.
+Writes a default config file.
