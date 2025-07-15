@@ -24,6 +24,16 @@ std::string write_blob(std::string& filePath , std::string& objectDir){
 
     unsigned char hash[SHA_DIGEST_LENGTH];
 
+    SHA1(reinterpret_cast<const unsigned char*>(full_data.c_str()), full_data.size() , hash);
+
+    std::ostringstream oss;
+
+    for(int i = 0 ; i < SHA_DIGEST_LENGTH ; ++i){
+       oss << std::hex << std::setw(2) << std::setfill('0') << (int)hash[i];
+    }
+
+    std::string sha1 = oss.str();
+
     
 
 }
