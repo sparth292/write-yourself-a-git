@@ -26,6 +26,16 @@ int main(int argc, char* args[]) {
         std::string sha1 = write_blob(file_path, repo.git_path("objects"));
         std::cout << sha1 << std::endl;
     }
+    // ithe changes jhale aahet nntr ithun ach continue karayche aahe
+    else if(cmd == "cat-file")
+    {
+        
+    // ithe changes jhale aahet nntr ithun ach continue karayche aahe
+         if(argc != 4 || std::string(args[2]) != "-p"){
+            std::cerr << "Usage of wyag cat-file -p <sha1>" << std::endl;
+            return 1;
+         }
+    }
     else {
         std::cerr << "Unknown Command : " << cmd << std::endl;
         return 1;
