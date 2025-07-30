@@ -25,14 +25,23 @@ so it should be fairly easy to follow , I guess.
 Let's first understand the structure of this project:
 
 wyag/
+
 ├── src/
+
 │   ├── main.cpp
+
 │   ├── object.cpp
+
 │   ├── repository.cpp
+
 │   ├── utils.cpp
+
 │   ├── object.h
+
 │   ├── repository.h
+
 │   ├── utils.h
+
 ├── wyag
 
 
