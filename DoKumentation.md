@@ -20,8 +20,7 @@ Language wise, i will be implementing this in C++ ,
 
 I'm not trying to do anything too fancy
 in fact, I chose C++ because it often reads like pseudocode,
-so it should be fairly easy to follow , I GUESS.
-IMO the most complicated part will be the command line args parsing logic 
+so it should be fairly easy to follow , I guess.
 
 Let's first understand the structure of this project:
 
