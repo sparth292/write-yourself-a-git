@@ -1,5 +1,7 @@
-A shitty Git Remake to Learn Basic Fundamentals of Git
+A shitty Git Remake just to Learn sum Basic Fundamentals of Git
 
 I just suck at documentation
 
-I'll be referring this article throughout this journey - https://wyag.thb.lt/
+I'll be referring this article - https://wyag.thb.lt/
+
+I'm Proud of myself
